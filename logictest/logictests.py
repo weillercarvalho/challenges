@@ -43,7 +43,7 @@ else:
 import math
 
 base = int(input('Digite o valor da base:'))
-altura = int(input('Digite o valor da altura:'))
+alturat(input('Digite o valor da altura:'))
 area = base * altura
 print('Área:', area)
 perimetro = (base * 2 + altura * 2)
@@ -201,19 +201,114 @@ for i in range(N):
             cont = cont + 1
             print('Contagem de negativos é:', cont)
 '''
+#Altura
+'''
+n = int(input("Quantas pessoas serao digitadas? "))
+
+nomes = [0 for x in range(n)]
+idades = [0 for x in range(n)]
+alturas = [0 for x in range(n)]
+
+for i in range(n):
+	print(f"Dados da {i+1}a pessoa:")
+	nomes[i] = str(input("Nome: "))
+	idades[i] = int(input("Idade: "))
+	alturas[i] = float(input("Altura: "))
+
+nmenores = 0
+alturatotal = 0
+for i in range(n):
+	if idades[i] < 16:
+		nmenores = nmenores + 1
+for i in range(n):
+	alturatotal = alturatotal + alturas[i]
+
+alturamedia = alturatotal / n
+percentualMenores = (float(nmenores) / n) * 100.0
+
+print(f"\nAltura media = {alturamedia:.2f}")
+print(f"Pessoas com menos de 16 anos: {percentualMenores:.1f}%")
+
+for i in range(n):
+	if idades[i] < 16:
+		print(nomes[i])
+
+'''
+#Vetores pares (meu)
+
+'''
+A = int(input('Quantos números você vai digitar?'))
+vet = [0 for x in range(A)]
+for v in range (0,A):
+    vet[v] = float(input('Digite um número:'))
+print('Vetores pares:')
+y = 0 
+for v in range (0,A):
+    if vet[v] % 2 == 0:
+        y = y + 1
+        print(f"{vet[v]} " , end="")
+print()
+print(f"Pares: {y} ")
+
+'''
+#Vetores pares (sistema)
+
+'''
+
+n = int(input("Quantos numeros voce vai digitar? "))
+
+vetor = [0 for x in range(n)]
+
+for i in range(n):
+	vetor[i] = int(input("Digite um numero: "))
+
+print("\nNUMEROS PARES:")
+
+qtdpares = 0
+for i in range(n):
+	if vetor[i] % 2 == 0:
+		print(f"{vetor[i]}  ", end="")
+		qtdpares = qtdpares + 1
+
+print(f"\n\nQUANTIDADE DE PARES = {qtdpares}")
 
 
+'''
 
+#Maior posição
 
+'''
 
+n = int(input('Quantos dígitos:'))
+vet = [0 for x in range(n)]
+for i in range (0,n):
+    vet[i] = float(input('Digite os número:'))
+maior = vet[0]
+posmaior = 0
+for i in range(0,n):
+    if vet[i] > maior:
+        maior = vet[i]
+        posmaior = i
+print(f"Maior valor = {maior:.1f}  ")
+print(f"Posição = {posmaior} ")
 
+'''
+#Soma de vetores
 
+'''
+n = int(input('Quantos valores terão cada vetor?'))
+a = [0 for x in range(n)]
+b = [0 for x in range(n)]
+c = [0 for x in range(n)]
+for i in range (0,n):
+    a[i] = float(input('Digite os valores do vetor A:'))
+for i in range (0,n):
+    b[i] = float(input('Digite os valores do vetor B:'))
 
-
-
-
-
-
+for i in range(0,n):
+    c[i] = a[i] + b[i]
+    print(f"Valor de C = {c[i]}" , end="")
+'''
 
 
 
