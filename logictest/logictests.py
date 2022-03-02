@@ -309,6 +309,52 @@ for i in range(0,n):
     c[i] = a[i] + b[i]
     print(f"Valor de C = {c[i]}" , end="")
 '''
+#Abaixo da média
+
+'''
+n = int(input('Digite o número de elementos do vetor:'))
+vet = [0 for x in range(n)]
+for i in range (0,n):
+    vet[i] = float(input('Digite os números:'))
+
+print('Média dos vetores:')
+c = 0
+for i in range(0,n):
+    c = c + vet[i]
+media = c / n
+print(f"\nMédia dos vetores: {media:.3f} ")
+print()
+print('Elementos abaixo da média:')
+for i in range(0,n):
+    if vet[i] < media:
+        print(f"\n {vet[i]:.1f}", end="")
+'''
+
+#Média pares (interessante)
+
+'''
+n = int(input("Quantos elementos vai ter o vetor? "))
+
+vetor: [int] = [0 for x in range(n)]
+
+for i in range(n):
+	vetor[i] = int(input("Digite um numero: "))
+
+npares = 0
+somapares = 0
+for i in range(n):
+	if vetor[i] % 2 == 0:
+		somapares = somapares + vetor[i]
+		npares = npares + 1
+
+if npares == 0:
+	print("NENHUM NUMERO PAR")
+else:
+	mediapares = float(somapares) / npares
+
+	print(f"MEDIA DOS PARES = {mediapares:.1f}")
+'''
+# Mais velho
 
 
 
