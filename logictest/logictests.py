@@ -487,9 +487,32 @@ for i in range(m):
 '''
 # Negativos matriz
 
+'''
 
+M = int(input('Qual a quantidade de linhas da matriz?'))
+N = int(input('Qual a quantidade de colunas da matriz?'))
+while M > 10 or N > 10:
+    print(f"\n Não é possível aceitar números maiores que 10.")
+    M = int(input('Qual a quantidade de linhas da matriz?'))
+    N = int(input('Qual a quantidade de colunas da matriz?'))
+matriz = [[0 for x in range(N)] for x in range(M)]
+for i in range(0,M):
+    for j in range(0,N):
+        matriz[i][j] = int(input(f" Elemento [{i}][{j}]: "))
+print('VALORES NEGATIVOS:')
+for i in range(0,M):
+    for j in range(0,N):
+        if matriz[i][j] < 0:
+            print(f" {matriz[i][j]} ")
 
+'''
+# Cada linha
 
+n = int(input('Qual a ordem da matriz?'))
+while n > 10:
+    print(f"\n Não é possível aceitar números maiores que 10.")
+    n = int(input('Qual a ordem da matriz?'))
+matriz = [[0 for x ]]
 
 
 
