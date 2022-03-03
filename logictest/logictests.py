@@ -373,6 +373,106 @@ print(f"\n Pessoa mais velha: ", x)
 
 # Aprovados
 
+'''
+n = int(input('Quantos alunos serão digitados:'))
+nome = [0 for x in range(n)]
+nota_1 = [0 for x in range(n)]
+nota_2 = [0 for x in range(n)]
+for i in range(0,n):
+    print(f"\n Digite nome, primeira e segunda nota do {i+1} aluno:")
+    nome[i] = input()
+    nota_1[i] = float(input())
+    nota_2[i] = float(input())
+print('Alunos aprovados:')
+c = 0
+y = 0
+for i in range(0,n):
+    c = (nota_1[i] + nota_2[i]) / 2
+    if c >= 6:
+        c = nome[i]
+        print(f"\n  {c} ", end="")    
+'''
+
+# Dados pessoas
+
+'''
+n = int(input('Quantas pessoas serão digitadas:'))
+altura = [0 for x in range(n)]
+sexo = [0 for x in range(n)]
+for i in range(0,n):
+    altura[i] = float(input(f"Altura da {i+1}a pessoa: "))
+    sexo[i] = input(f"Sexo da {i+1}a pessoa: ")
+w = altura[0]
+for i in range(0,n):
+    if altura[i]>w:
+        w = altura[i]
+print(f"\n Altura máxima: ", w)
+for i in range(0,n):
+    if altura[i]<w:
+        w = altura[i]
+print(f"\n Altura mínima: ", w)
+altfem = 0
+a = 0
+nm = 0
+for i in range(0,n):
+    if sexo[i] != 'F':
+        a = a + 1
+    else:
+        nm = nm + 1
+        altfem = altfem + altura[i]
+altmed = altfem / nm
+print(f"Número de homens: {a}")
+print(f"Média dos valores femininos: {altmed:.2f} ")   
+'''
+
+# Comerciante
+
+'''
+n = int(input('Serão digitados dados de quantos produtos?'))
+nome = [0 for x in range(n)]
+compra = [0 for x in range(n)]
+venda = [0 for x in range(n)]
+for i in range(0,n):
+    print(f"\n Produto {i+1}")
+    nome[i] = input(f"Nome: ")
+    compra[i] = float(input(f"Preço de compra: "))
+    venda[i] = float(input(f"Preço de venda: "))
+a = 0
+b = 0
+c = 0
+for i in range(0,n):
+    if venda[i] < compra[i] * 1.1:
+        a = a + 1
+    elif venda[i] >= compra[i] * 1.1 and venda[i] <= compra[i] * 1.2:
+        b = b + 1
+    elif venda[i] > compra[i] * 1.2:
+        c = c + 1
+print(f"Lucros abaixo de 10% ", a)
+print(f"Lucros entre 10 e 20 %: ", b)
+print(f"Lucro acima de 20%: ", c)
+d = 0
+e = 0
+for i in range(0,n):
+    d = compra[i] + d
+    e = venda[i] + e
+lucrototal = e - d
+print(f"Valor total de compra: {d:.2f} ")
+print(f"Valor total de venda: {e:.2f} ")
+print(f"Lucro total: {lucrototal:.2f} ")
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
