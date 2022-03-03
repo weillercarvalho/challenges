@@ -355,8 +355,23 @@ else:
 	print(f"MEDIA DOS PARES = {mediapares:.1f}")
 '''
 # Mais velho
+'''
+n = int(input('Quantas pessoas você vai digitar:'))
+nome = [0 for x in range(n)]
+idade = [0 for x in range(n)]
+for i in range(0,n):
+    print(f"Dados da {i+1}a pessoa:")
+    nome[i] = input('Nome:')
+    idade[i] = int(input('Idade:'))
+x = idade[0]
+for i in range(n):
+    if idade[i] > x:
+        x = idade[i]
+print(f"\n Pessoa mais velha: ", x)
 
+'''
 
+# Aprovados
 
 
 
